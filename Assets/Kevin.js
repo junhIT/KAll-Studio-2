@@ -20,73 +20,69 @@ function Start () {
 }
 
 function Update () {
- 
+
  	timer += Time.deltaTime ;
- 
+
     if (timer >= attackCoolTime) {
- 
+
         Attack() ;
         timer = 0 ;
- 
+
     }
- 
+
     if (Input.GetKey("left")) {
-    
+
         // 왼쪽 키가 눌리면 실행할 내용
          if (player.transform.position.x >= -0.5) {
         player.transform.position.x -= 0.01 ;
         }
-        
+
     }
     else if (Input.GetKey("right")) {
-    
+
         // 오른쪽 키가 눌리면 실행할 내용
         if (player.transform.position.x <= 0.5) {
-        player.transform.position.x += 0.01 ; 
+        player.transform.position.x += 0.01 ;
         }
-    
+
     }
- 
+
 }
 
 function Attack () {
- 
+
     var currentBullet : GameObject ;
- 
+
     currentBullet = Instantiate (bullet, player.transform.position,  Quaternion.identity) ;
- 
- 
+
+
 }
 
 function OnTriggerEnter (enterCollider : Collider) {
- 
-    if (enterCollider.gameObject.name == "npc_Mars") {
- 
+
+    if (enterCollider.gameObject.name == "npc1") {
+
         Destroy (enterCollider.gameObject) ;
         if (hp==1){
         Destroy (hp1) ;
         hp--;
- 		}	
+ 		}
  		if (hp==2){
         Destroy (hp2) ;
         hp--;
- 		}	
+ 		}
  		if (hp==3){
         Destroy (hp3) ;
         hp--;
- 		}	
+ 		}
  		if (hp==4){
         Destroy (hp4) ;
          hp--;
- 		}	
+ 		}
  		if (hp==5){
         Destroy (hp5) ;
          hp--;
- 		}	
+ 		}
     }
- 
+
 }
-
-
-
-
