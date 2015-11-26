@@ -27,4 +27,6 @@ function OnTriggerEnter (enterCollider : Collider) {
 }
 
 function Update () {
+	transform.Rotate(Vector3.up*5);
+
 }
