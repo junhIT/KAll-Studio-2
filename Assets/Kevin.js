@@ -63,6 +63,9 @@ function OnTriggerEnter (enterCollider : Collider) {
     if (enterCollider.gameObject.name == "npc1") {
 
         Destroy (enterCollider.gameObject) ;
+        if (hp==0){
+        Destroy (gameObject) ;
+ 		}
         if (hp==1){
         Destroy (hp1) ;
         hp--;
@@ -84,5 +87,31 @@ function OnTriggerEnter (enterCollider : Collider) {
          hp--;
  		}
     }
+	if (enterCollider.gameObject.name == "npcbullet1") {
 
+        Destroy (enterCollider.gameObject) ;
+        if (hp==0){
+        Destroy (gameObject) ;
+ 		}
+        if (hp==1){
+        Destroy (hp1) ;
+        hp--;
+ 		}
+ 		if (hp==2){
+        Destroy (hp2) ;
+        hp--;
+ 		}
+ 		if (hp==3){
+        Destroy (hp3) ;
+        hp--;
+ 		}
+ 		if (hp==4){
+        Destroy (hp4) ;
+         hp--;
+ 		}
+ 		if (hp==5){
+        Destroy (hp5) ;
+         hp--;
+ 		}
+    }
 }

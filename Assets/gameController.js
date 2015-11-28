@@ -18,7 +18,7 @@ function Update () {
     if (npcTimer > npcCoolTime) {
 
         npcTimer = 0 ;
-        var npcObj : GameObject = Instantiate (npc1, Vector3(Random.Range(-0.5, 0.5), 2, -5), Quaternion.identity) ;
+        var npcObj : GameObject = Instantiate (npc1, Vector3(Random.Range(-0.5, 0.5), 2, -5), Quaternion.Euler(0,0,20)) ;
  		npcObj.name = "npc1" ;
     }
 
