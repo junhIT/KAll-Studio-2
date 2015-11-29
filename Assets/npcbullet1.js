@@ -12,9 +12,8 @@ function Start () {
 function OnTriggerEnter (enterCollider : Collider) {
 
     if (enterCollider.gameObject.name == "bulletEraser"){
-     Destroy (gameObject) ;
- }
- else if (enterCollider.gameObject.name == "Player") {
+    	Destroy (gameObject) ;
+ 	} else if (enterCollider.gameObject.name == "Player") {
 
         Destroy (gameObject) ;
         //Destroy (enterCollider.gameObject) ;
@@ -27,6 +26,7 @@ function OnTriggerEnter (enterCollider : Collider) {
 }
 
 function Update () {
+
 	transform.Rotate(Vector3.up*5);
 	if (gameObject.transform.position.y <= -0.2) {
  

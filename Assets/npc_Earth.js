@@ -8,8 +8,8 @@ var npc : GameObject ;
 
 function Start () {
 
-//	npcSpeed = 20;
-	//gameObject.GetComponent(Rigidbody).AddForce(transform.up * npcSpeed * -1);
+	npcSpeed = 20;
+	gameObject.GetComponent(Rigidbody).AddForce(transform.up * npcSpeed * -1);
 	attackCoolTime = 3 ;
     timer = 0 ;
  	Attack() ;
@@ -37,12 +37,12 @@ function Update () {
 function Attack () {
 
     var currentBullet1 : GameObject ;
-		var currentBullet2 : GameObject ;
-		var currentBullet3 : GameObject ;
+	var currentBullet2 : GameObject ;
+	var currentBullet3 : GameObject ;
 
     currentBullet1 = Instantiate (bullet, npc.transform.position,  Quaternion.identity) ;
-		currentBullet2 = Instantiate (bullet, npc.transform.position,  Quaternion.Euler(0,0,20)) ;
-		currentBullet3 = Instantiate (bullet, npc.transform.position,  Quaternion.Euler(0,0,-20)) ;
+	currentBullet2 = Instantiate (bullet, npc.transform.position,  Quaternion.Euler(0,0,20)) ;
+	currentBullet3 = Instantiate (bullet, npc.transform.position,  Quaternion.Euler(0,0,-20)) ;
 
 	currentBullet1.name="npcbullet1";
 	currentBullet2.name="npcbullet1";
