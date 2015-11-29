@@ -25,6 +25,7 @@ function OnGUI()
    }
    
    if (GUI.RepeatButton(new Rect(10, 270, 40, 40), "B"));
+   GUI.Label (new Rect(10,270,40,30),"hi");
 }
 
 function Update () {

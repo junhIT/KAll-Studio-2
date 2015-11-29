@@ -1,4 +1,5 @@
 ﻿#pragma strict
+var setName : GameObject ;
  
 function Btnstart () {
  
@@ -16,7 +17,8 @@ function Btnexit () {
 }
 
 function BtnKevin () {
- 
+	setName.name="Player";
+	 DontDestroyOnLoad(setName);
     Application.LoadLevel("Kevin") ;
 }
 
@@ -26,11 +28,13 @@ function Btnback () {
 }
 
 function BtnBob () {
- 
-    Application.LoadLevel("Bob") ;
+ 	setName.name="Player";
+	 DontDestroyOnLoad(setName);
+    Application.LoadLevel("Kevin") ;
 }
 
 function BtnStuart () {
- 
-    Application.LoadLevel("Stuart") ;
+ 	setName.name="Player";
+	 DontDestroyOnLoad(setName);
+    Application.LoadLevel("Kevin") ;
 }

@@ -2,11 +2,6 @@
 
 var player : GameObject ;
 var bullet : GameObject ;
-var hp1 : GameObject;
-var hp2 : GameObject;
-var hp3 : GameObject;
-var hp4 : GameObject;
-var hp5 : GameObject;
 private var attackCoolTime : float ;
 private var timer : float ;
 var hp : float;
@@ -17,6 +12,9 @@ function Start () {
     timer = 0 ;
  	Attack() ;
  	hp=2;
+ 	var temp : GameObject =Instantiate (hp1, Vector3(300, 400, -5), Quaternion.identity) ;
+ 	temp.name="hp1";
+ 	 DontDestroyOnLoad(temp);
 }
 
 function Update () {
