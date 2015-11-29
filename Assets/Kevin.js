@@ -12,9 +12,6 @@ function Start () {
     timer = 0 ;
  	Attack() ;
  	hp=2;
- 	var temp : GameObject =Instantiate (hp1, Vector3(300, 400, -5), Quaternion.identity) ;
- 	temp.name="hp1";
- 	 DontDestroyOnLoad(temp);
 }
 
 function Update () {
@@ -65,23 +62,23 @@ function OnTriggerEnter (enterCollider : Collider) {
         Destroy (gameObject) ;
  		}
         if (hp==1){
-        Destroy (hp1) ;
+    
         hp--;
  		}
  		if (hp==2){
-        Destroy (hp2) ;
+  
         hp--;
  		}
  		if (hp==3){
-        Destroy (hp3) ;
+      
         hp--;
  		}
  		if (hp==4){
-        Destroy (hp4) ;
+   
          hp--;
  		}
  		if (hp==5){
-        Destroy (hp5) ;
+
          hp--;
  		}
     }
@@ -92,23 +89,23 @@ function OnTriggerEnter (enterCollider : Collider) {
         Destroy (gameObject) ;
  		}
         if (hp==1){
-        Destroy (hp1) ;
+  
         hp--;
  		}
  		if (hp==2){
-        Destroy (hp2) ;
+      
         hp--;
  		}
  		if (hp==3){
-        Destroy (hp3) ;
+      
         hp--;
  		}
  		if (hp==4){
-        Destroy (hp4) ;
+  
          hp--;
  		}
  		if (hp==5){
-        Destroy (hp5) ;
+      
          hp--;
  		}
     }
