@@ -5,12 +5,15 @@ var npc2 : GameObject ;
 private var npcCoolTime : float ;
 private var npcTimer : float ;
 private var gameTimer : float ;
+var hpview : UI.Text ;
+var GetHp : float ;
+
+
 
 function Start () {
-
+    gameObject.Find("Player").GetComponent("kevin");
     npcTimer = 0 ;
     npcCoolTime = 4;
-
 }
 
 function Update () {

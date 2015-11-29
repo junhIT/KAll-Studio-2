@@ -4,7 +4,11 @@ var player : GameObject ;
 var bullet : GameObject ;
 private var attackCoolTime : float ;
 private var timer : float ;
-var hp : float;
+public var hp : float;
+
+
+
+
 
 
 function Start () {
