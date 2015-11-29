@@ -4,7 +4,7 @@ var player : GameObject ;
 var bullet : GameObject ;
 private var attackCoolTime : float ;
 private var timer : float ;
-public var hp : float;
+public var hp : int;
 
 
 
@@ -15,7 +15,7 @@ function Start () {
 	attackCoolTime = 0.5 ;
     timer = 0 ;
  	Attack() ;
- 	hp=2;
+ 	hp=3;
 }
 
 function Update () {
@@ -59,58 +59,23 @@ function Attack () {
 
 function OnTriggerEnter (enterCollider : Collider) {
 
-    if (enterCollider.gameObject.name == "npc1"||enterCollider.gameObject.name == "npc2") {
+    if (enterCollider.gameObject.name == "npc1"||enterCollider.gameObject.name == "npc2"||enterCollider.gameObject.name == "npcbullet1") {
 
         Destroy (enterCollider.gameObject) ;
-        if (hp==0){
-        Destroy (gameObject) ;
- 		}
         if (hp==1){
-
-        hp--;
- 		}
- 		if (hp==2){
-
-        hp--;
- 		}
- 		if (hp==3){
-
-        hp--;
- 		}
- 		if (hp==4){
-
-         hp--;
- 		}
- 		if (hp==5){
-
-         hp--;
- 		}
-    }
-	if (enterCollider.gameObject.name == "npcbullet1") {
-
-        Destroy (enterCollider.gameObject) ;
-        if (hp==0){
         Destroy (gameObject) ;
- 		}
-        if (hp==1){
-
-        hp--;
- 		}
+ 			}
  		if (hp==2){
-
         hp--;
- 		}
+ 			}
  		if (hp==3){
-
         hp--;
- 		}
+ 			}
  		if (hp==4){
-
          hp--;
- 		}
+ 			}
  		if (hp==5){
-
          hp--;
- 		}
+ 			}
     }
 }

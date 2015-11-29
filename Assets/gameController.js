@@ -6,21 +6,20 @@ private var npcCoolTime : float ;
 private var npcTimer : float ;
 private var gameTimer : float ;
 var hpview : UI.Text ;
-var GetHp : float ;
+var GetHp : int ;
 
 
 
 function Start () {
-    gameObject.Find("Player").GetComponent("kevin");
     npcTimer = 0 ;
     npcCoolTime = 4;
 }
 
 function Update () {
-
+  GetHp=GameObject.Find("Player").GetComponent(Kevin).hp;
     npcTimer += Time.deltaTime ;
     gameTimer+= Time.deltaTime ;
-
+    hpview.text="x"+GetHp;
     if (npcTimer > npcCoolTime) {
 
         npcTimer = 0 ;
