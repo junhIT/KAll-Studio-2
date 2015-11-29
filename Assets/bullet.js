@@ -14,7 +14,7 @@ function OnTriggerEnter (enterCollider : Collider) {
     if (enterCollider.gameObject.name == "bulletEraser"){
      Destroy (gameObject) ;
  }
- else if (enterCollider.gameObject.name == "npc1") {
+ else if (enterCollider.gameObject.name == "npc1"||enterCollider.gameObject.name == "npc2") {
 
         Destroy (gameObject) ;
         Destroy (enterCollider.gameObject) ;

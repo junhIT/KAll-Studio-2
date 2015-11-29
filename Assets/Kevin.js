@@ -55,26 +55,26 @@ function Attack () {
 
 function OnTriggerEnter (enterCollider : Collider) {
 
-    if (enterCollider.gameObject.name == "npc1") {
+    if (enterCollider.gameObject.name == "npc1"||enterCollider.gameObject.name == "npc2") {
 
         Destroy (enterCollider.gameObject) ;
         if (hp==0){
         Destroy (gameObject) ;
  		}
         if (hp==1){
-    
+
         hp--;
  		}
  		if (hp==2){
-  
+
         hp--;
  		}
  		if (hp==3){
-      
+
         hp--;
  		}
  		if (hp==4){
-   
+
          hp--;
  		}
  		if (hp==5){
@@ -89,23 +89,23 @@ function OnTriggerEnter (enterCollider : Collider) {
         Destroy (gameObject) ;
  		}
         if (hp==1){
-  
+
         hp--;
  		}
  		if (hp==2){
-      
+
         hp--;
  		}
  		if (hp==3){
-      
+
         hp--;
  		}
  		if (hp==4){
-  
+
          hp--;
  		}
  		if (hp==5){
-      
+
          hp--;
  		}
     }
