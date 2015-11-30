@@ -9,7 +9,7 @@ var npc : GameObject ;
 function Start () {
 
 	npcSpeed = 20;
-	gameObject.GetComponent(Rigidbody).AddForce(transform.up * npcSpeed * -1);
+	//gameObject.GetComponent(Rigidbody).AddForce(transform.up * npcSpeed * -1);
 	attackCoolTime = 3 ;
     timer = 0 ;
  	Attack() ;
