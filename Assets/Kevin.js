@@ -12,7 +12,7 @@ public var hp : int;
 
 
 function Start () {
-	attackCoolTime = 0.5 ;
+	attackCoolTime = 0.1 ;
     timer = 0 ;
  	Attack() ;
  	hp=3;
@@ -59,7 +59,7 @@ function Attack () {
 
 function OnTriggerEnter (enterCollider : Collider) {
 
-    if (enterCollider.gameObject.name == "npc1"||enterCollider.gameObject.name == "npc2"||enterCollider.gameObject.name == "npcbullet1") {
+    if (enterCollider.gameObject.name == "npc1"||enterCollider.gameObject.name == "npc2"||enterCollider.gameObject.name == "npcbullet1"||enterCollider.gameObject.name == "npc3") {
 
         Destroy (enterCollider.gameObject) ;
         if (hp==1){

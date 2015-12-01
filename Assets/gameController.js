@@ -2,6 +2,7 @@
 
 var npc1 : GameObject ;
 var npc2 : GameObject ;
+var npc3 : GameObject ;
 private var npcCoolTime : float ;
 private var npcTimer : float ;
 private var gameTimer : float ;
@@ -25,6 +26,8 @@ function Update () {
         npcTimer = 0 ;
         var npcObj : GameObject = Instantiate (npc1, Vector3(Random.Range(-0.5, 0.5), 2, -5), Quaternion.Euler(0,0,20)) ;
  		     npcObj.name = "npc1" ;
+         var npcObj3 : GameObject = Instantiate (npc3, Vector3(Random.Range(-0.5, 0.5), 2, -5), Quaternion.identity) ;
+  		     npcObj3.name = "npc3" ;
     }
 
 }
