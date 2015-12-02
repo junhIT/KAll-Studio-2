@@ -3,6 +3,7 @@
 var npc1 : GameObject ;
 var npc2 : GameObject ;
 var npc3 : GameObject ;
+var boss : GameObject ;
 private var npcCoolTime : float ;
 private var npcTimer : float ;
 private var gameTimer : float ;
@@ -17,28 +18,42 @@ function Start () {
 }
 
 function Update () {
-  GetHp=GameObject.Find("Player").GetComponent(Kevin).hp;
+  	GetHp=GameObject.Find("Player").GetComponent(Kevin).hp;
     npcTimer += Time.deltaTime ;
-    gameTimer+= Time.deltaTime ;
+	gameTimer+= Time.deltaTime ;
+
     hpview.text="x"+GetHp;
+    
     if (npcTimer > npcCoolTime) {
 
         npcTimer = 0 ;
         var npcObj : GameObject = Instantiate (npc1, Vector3(Random.Range(-0.5, 0.5), 2, -5), Quaternion.Euler(0,0,20)) ;
- 		     npcObj.name = "npc1" ;
-         var npcObj3 : GameObject = Instantiate (npc3, Vector3(Random.Range(-0.5, 0.5), 2, -5), Quaternion.identity) ;
-  		     npcObj3.name = "npc3" ;
+ 		npcObj.name = "npc1" ;
+		var npcObj3 : GameObject = Instantiate (npc3, Vector3(Random.Range(-0.5, 0.5), 2, -5), Quaternion.identity) ;
+		npcObj3.name = "npc3" ;
+
     }
 
 }
 
-InvokeRepeating("initnpc2", 3,10);
+
+InvokeRepeating("initnpc2",3,10);
 function initnpc2 (){
-  var npcObj2 : GameObject = Instantiate (npc2, Vector3(Random.Range(-0.5, 0.5), 2, -5), Quaternion.identity) ;
-   npcObj2.name = "npc2" ;
+	var npcObj2 : GameObject = Instantiate (npc2, Vector3(Random.Range(-0.5, 0.5), 2, -5), Quaternion.identity) ;
+	npcObj2.name = "npc2" ;
 }
 function initnpc2se (){
-  var npcObj2 : GameObject = Instantiate (npc2, Vector3(Random.Range(-0.5, 0.5), 1, -5), Quaternion.identity) ;
-   npcObj2.name = "npc2" ;
+	var npcObj2 : GameObject = Instantiate (npc2, Vector3(Random.Range(-0.5, 0.5), 1, -5), Quaternion.identity) ;
+	npcObj2.name = "npc2" ;
 }
-InvokeRepeating("initnpc2se", 7,20);
+InvokeRepeating("initnpc2se",7,20);
+
+
+function initboss(){
+	var bossObj : GameObject = Instantiate (boss, Vector3(0, 1.5, -5), Quaternion.identity) ;
+	bossObj.name = "boss_stage1" ;
+}
+
+Invoke("initboss",31);
+	
+	

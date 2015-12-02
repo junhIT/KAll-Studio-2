@@ -59,23 +59,24 @@ function Attack () {
 
 function OnTriggerEnter (enterCollider : Collider) {
 
-    if (enterCollider.gameObject.name == "npc1"||enterCollider.gameObject.name == "npc2"||enterCollider.gameObject.name == "npcbullet1"||enterCollider.gameObject.name == "npc3") {
+    if (enterCollider.gameObject.name == "npc1"||enterCollider.gameObject.name == "npcbullet1"||enterCollider.gameObject.name == "npc2"||enterCollider.gameObject.name == "npcbullet2"
+    ||enterCollider.gameObject.name == "npc3"||enterCollider.gameObject.name == "npcbullet3"||enterCollider.gameObject.name == "boss"||enterCollider.gameObject.name == "bossbullet") {
 
         Destroy (enterCollider.gameObject) ;
         if (hp==1){
-        Destroy (gameObject) ;
- 			}
+        	Destroy (gameObject) ;
+ 		}
  		if (hp==2){
-        hp--;
- 			}
+        	hp--;
+ 		}
  		if (hp==3){
-        hp--;
- 			}
+        	hp--;
+ 		}
  		if (hp==4){
-         hp--;
- 			}
+        	hp--;
+ 		}
  		if (hp==5){
-         hp--;
- 			}
+        	hp--;
+ 		}
     }
 }
