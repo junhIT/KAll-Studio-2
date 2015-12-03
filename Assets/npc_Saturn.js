@@ -10,7 +10,7 @@ function Start () {
 
 	npcSpeed = 20;
 	gameObject.GetComponent(Rigidbody).AddForce(transform.up * npcSpeed * -1);
-	attackCoolTime = 3 ;
+	attackCoolTime = 1 ;
     timer = 0 ;
  	Attack() ;
 
@@ -43,7 +43,7 @@ function Attack () {
 	currentBullet1 = Instantiate (bullet, npc.transform.position,  Quaternion.Euler(0,0,20)) ;
 	currentBullet2 = Instantiate (bullet, npc.transform.position,  Quaternion.Euler(0,0,-20)) ;
 
-	
+
 	currentBullet1.name="npcbullet3";
 	currentBullet2.name="npcbullet3";
 }

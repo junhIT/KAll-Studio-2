@@ -11,6 +11,7 @@ function Start () {
 	hp = 50;
 	npcSpeed = 20;
 	gameObject.GetComponent(Rigidbody).AddForce(transform.up * npcSpeed * -1);
+	gameObject.GetComponent(Rigidbody).AddForce(transform.right * npcSpeed * -1);
 	attackCoolTime = 3 ;
     timer = 0 ;
  	Attack() ;
@@ -29,7 +30,16 @@ function Update () {
 		gameObject.GetComponent(Rigidbody).AddForce(transform.up * npcSpeed * -1);
 
 		}
-    
+		if (gameObject.transform.position.x >= 0.5) {
+
+			gameObject.GetComponent(Rigidbody).AddForce(transform.right * npcSpeed * -1);
+
+			}
+			if (gameObject.transform.position.x <= -0.5) {
+
+				gameObject.GetComponent(Rigidbody).AddForce(transform.right * npcSpeed * 1);
+
+				}
 
     	timer += Time.deltaTime ;
 
