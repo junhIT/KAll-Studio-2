@@ -8,6 +8,7 @@ private var npcCoolTime : float ;
 private var npcTimer : float ;
 private var gameTimer : float ;
 var hpview : UI.Text ;
+var stage1 : UI.Text ;
 var GetHp : int ;
 
 
@@ -15,6 +16,7 @@ var GetHp : int ;
 function Start () {
     npcTimer = 0 ;
     npcCoolTime = 4;
+    gameTimer=0;
 }
 
 function Update () {
@@ -23,7 +25,12 @@ function Update () {
 	gameTimer+= Time.deltaTime ;
 
     hpview.text="x"+GetHp;
-    
+    if(gameTimer>30){
+      Application.LoadLevel("boss_stage1") ;
+    }
+    if(gameTimer>5){
+      Destroy(stage1);
+    }
     if (npcTimer > npcCoolTime) {
 
         npcTimer = 0 ;
@@ -55,5 +62,3 @@ function initboss(){
 }
 
 Invoke("initboss",31);
-	
-	

@@ -12,7 +12,7 @@ public var hp : int;
 
 
 function Start () {
-	attackCoolTime = 0.1 ;
+	attackCoolTime = 0.3 ;
     timer = 0 ;
  	Attack() ;
  	hp=3;
