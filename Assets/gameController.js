@@ -3,13 +3,13 @@
 var npc1 : GameObject ;
 var npc2 : GameObject ;
 var npc3 : GameObject ;
-var boss : GameObject ;
 private var npcCoolTime : float ;
 private var npcTimer : float ;
 private var gameTimer : float ;
 var hpview : UI.Text ;
 var stage1 : UI.Text ;
 var GetHp : int ;
+var item : GameObject ;
 
 
 
@@ -22,7 +22,7 @@ function Start () {
 function Update () {
   	GetHp=GameObject.Find("Player").GetComponent(Kevin).hp;
     npcTimer += Time.deltaTime ;
-	gameTimer+= Time.deltaTime ;
+	  gameTimer+= Time.deltaTime ;
 
     hpview.text="x"+GetHp;
     if(gameTimer>30){
@@ -56,9 +56,9 @@ function initnpc2se (){
 InvokeRepeating("initnpc2se",7,20);
 
 
-function initboss(){
-	var bossObj : GameObject = Instantiate (boss, Vector3(0, 1.5, -5), Quaternion.identity) ;
-	bossObj.name = "boss_stage1" ;
+function inititem(){
+	var itemObj : GameObject = Instantiate (item, Vector3(0, 1.5, -5), Quaternion.identity) ;
+	itemObj.name = "item_hp" ;
 }
 
-Invoke("initboss",31);
+Invoke("inititem",15);

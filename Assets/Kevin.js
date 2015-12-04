@@ -79,4 +79,8 @@ function OnTriggerEnter (enterCollider : Collider) {
         	hp--;
  		}
     }
+		  if (enterCollider.gameObject.name == "item_hp"){
+					hp++;
+					Destroy (enterCollider.gameObject) ;
+			}
 }
