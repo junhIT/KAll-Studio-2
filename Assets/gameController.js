@@ -10,6 +10,9 @@ var hpview : UI.Text ;
 var stage1 : UI.Text ;
 var GetHp : int ;
 var item : GameObject ;
+var item2 : GameObject ;
+var item3 : GameObject ;
+
 
 
 
@@ -42,13 +45,13 @@ function Update () {
     }
 
 }
-
-
-InvokeRepeating("initnpc2",3,10);
 function initnpc2 (){
 	var npcObj2 : GameObject = Instantiate (npc2, Vector3(Random.Range(-0.5, 0.5), 2, -5), Quaternion.identity) ;
 	npcObj2.name = "npc2" ;
 }
+
+InvokeRepeating("initnpc2",3,10);
+
 function initnpc2se (){
 	var npcObj2 : GameObject = Instantiate (npc2, Vector3(Random.Range(-0.5, 0.5), 1, -5), Quaternion.identity) ;
 	npcObj2.name = "npc2" ;
@@ -56,9 +59,24 @@ function initnpc2se (){
 InvokeRepeating("initnpc2se",7,20);
 
 
-function inititem(){
-	var itemObj : GameObject = Instantiate (item, Vector3(0, 1.5, -5), Quaternion.identity) ;
+function inititem_hp(){
+	var itemObj : GameObject = Instantiate (item, Vector3(Random.Range(-0.5, 0.5), 2, -5), Quaternion.identity) ;
 	itemObj.name = "item_hp" ;
 }
 
-Invoke("inititem",15);
+Invoke("inititem_hp",1);
+
+function inititem_multishot(){
+	var itemObj : GameObject = Instantiate (item2, Vector3(Random.Range(-0.5, 0.5), 2, -5), Quaternion.identity) ;
+	itemObj.name = "item_multishot" ;
+}
+
+Invoke("inititem_multishot", 1);
+Invoke("inititem_multishot", 2);
+Invoke("inititem_multishot", 10);
+
+function inititem_super(){
+	var itemObj : GameObject = Instantiate (item3, Vector3(Random.Range(-0.5, 0.5), 2, -5), Quaternion.identity) ;
+	itemObj.name = "item_super" ;
+}
+Invoke("inititem_super", 15);

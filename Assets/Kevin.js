@@ -5,7 +5,10 @@ var bullet : GameObject ;
 private var attackCoolTime : float ;
 private var timer : float ;
 public var hp : int;
-
+private var bulletType : float ;
+private var temp_hp : int ;
+private var super_timer : float ;
+private var super_cooltime : float ;
 
 
 
@@ -14,19 +17,29 @@ public var hp : int;
 function Start () {
 	attackCoolTime = 0.3 ;
     timer = 0 ;
+    super_timer = 4;
  	Attack() ;
  	hp=3;
+ 	bulletType = 0;
+ 	temp_hp = 0;
+ 	super_cooltime = 3;
 }
 
 function Update () {
 
  	timer += Time.deltaTime ;
+ 	super_timer += Time.deltaTime;
 
     if (timer >= attackCoolTime) {
 
         Attack() ;
         timer = 0 ;
 
+    }
+
+    if (super_timer >= 3 && super_timer <= 3.5) {
+        hp=temp_hp;
+		
     }
 
     if (Input.GetKey("left")) {
@@ -51,9 +64,22 @@ function Update () {
 function Attack () {
 
     var currentBullet : GameObject ;
-
-    currentBullet = Instantiate (bullet, player.transform.position,  Quaternion.identity) ;
-
+    var currentBullet2 : GameObject ;
+    var currentBullet3 : GameObject ;
+    
+	if(bulletType == 0)	{
+    	currentBullet = Instantiate (bullet, player.transform.position,  Quaternion.identity) ;
+    }
+    else if(bulletType == 1)    {
+    	currentBullet = Instantiate (bullet, player.transform.position,  Quaternion.Euler(0,0,-10)) ;
+    	currentBullet2 = Instantiate (bullet, player.transform.position,  Quaternion.Euler(0,0,10)) ;
+    }
+	else if(bulletType >= 2)    {
+    	currentBullet = Instantiate (bullet, player.transform.position,  Quaternion.Euler(0,0,-15)) ;
+    	currentBullet2 = Instantiate (bullet, player.transform.position,  Quaternion.Euler(0,0,0)) ;
+    	currentBullet3 = Instantiate (bullet, player.transform.position,  Quaternion.Euler(0,0,15)) ;
+    }
+	
 
 }
 
@@ -83,4 +109,14 @@ function OnTriggerEnter (enterCollider : Collider) {
 					hp++;
 					Destroy (enterCollider.gameObject) ;
 			}
+		 if (enterCollider.gameObject.name == "item_multishot"){
+					bulletType++;
+					Destroy (enterCollider.gameObject) ;
+			}
+		 if (enterCollider.gameObject.name == "item_super"){
+					temp_hp=hp;
+					hp=100;
+					super_timer=0;
+					Destroy (enterCollider.gameObject) ;
+			}	
 }

@@ -1,10 +1,16 @@
 fileFormatVersion: 2
 guid: 5671962b7cebade45baa75a2df58643f
-timeCreated: 1448526255
+timeCreated: 1449580516
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - npc1: {instanceID: 0}
+  - npc2: {instanceID: 0}
+  - npc3: {instanceID: 0}
+  - hpview: {instanceID: 0}
+  - stage1: {instanceID: 0}
+  - itemhp: {fileID: 122570, guid: 58002d396757d5141ae06b1d28d5b27a, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
