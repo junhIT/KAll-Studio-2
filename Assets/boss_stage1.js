@@ -74,3 +74,15 @@ function Attack () {
 	currentBullet4.name="bossbullet";
 
 }
+
+function OnDestroy () {
+ 
+    Application.LoadLevel("stage2") ;    
+ 
+}
+
+
+
+
+
+

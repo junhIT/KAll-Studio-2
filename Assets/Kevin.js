@@ -2,7 +2,7 @@
 
 var player : GameObject ;
 var bullet : GameObject ;
-private var attackCoolTime : float ;
+var attackCoolTime : float ;
 private var timer : float ;
 public var hp : int;
 private var bulletType : float ;
@@ -15,11 +15,9 @@ private var super_cooltime : float ;
 
 
 function Start () {
-	attackCoolTime = 0.3 ;
     timer = 0 ;
     super_timer = 4;
  	Attack() ;
- 	hp=3;
  	bulletType = 0;
  	temp_hp = 0;
  	super_cooltime = 3;
@@ -90,7 +88,8 @@ function OnTriggerEnter (enterCollider : Collider) {
 
         Destroy (enterCollider.gameObject) ;
         if (hp==1){
-        	Destroy (gameObject) ;
+         Application.LoadLevel("select_ch") ;
+        	  
  		}
  		if (hp==2){
         	hp--;
@@ -120,3 +119,9 @@ function OnTriggerEnter (enterCollider : Collider) {
 					Destroy (enterCollider.gameObject) ;
 			}	
 }
+
+ 
+    
+ 
+
+

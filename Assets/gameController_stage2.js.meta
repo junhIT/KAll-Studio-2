@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 802b9f1081848fb47b086d06e88fbb6f
+timeCreated: 1449649825
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - npc1: {instanceID: 0}
+  - npc2: {instanceID: 0}
+  - npc3: {instanceID: 0}
+  - hpview: {instanceID: 0}
+  - stage1: {instanceID: 0}
+  - itemhp: {fileID: 122570, guid: 58002d396757d5141ae06b1d28d5b27a, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
