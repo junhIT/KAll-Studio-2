@@ -94,18 +94,30 @@ function OnTriggerEnter (enterCollider : Collider) {
  		if (hp==2){
         	hp--;
         	bulletType=0;
+        	temp_hp=hp;
+			hp=100;
+        	super_timer=2;
  		}
  		if (hp==3){
         	hp--;
         	bulletType=0;
+        	temp_hp=hp;
+			hp=100;
+        	super_timer=2;
  		}
  		if (hp==4){
         	hp--;
         	bulletType=0;
+        	temp_hp=hp;
+			hp=100;
+        	super_timer=2;
  		}
  		if (hp==5){
         	hp--;
         	bulletType=0;
+        	temp_hp=hp;
+			hp=100;
+        	super_timer=2;
  		}
     }
 		  if (enterCollider.gameObject.name == "item_hp"){
