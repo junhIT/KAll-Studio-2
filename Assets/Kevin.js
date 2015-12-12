@@ -44,7 +44,7 @@ function Update () {
 
         // 왼쪽 키가 눌리면 실행할 내용
          if (player.transform.position.x >= -0.5) {
-        player.transform.position.x -= 0.01 ;
+        player.transform.position.x -= 0.015 ;
         }
 
     }
@@ -52,7 +52,7 @@ function Update () {
 
         // 오른쪽 키가 눌리면 실행할 내용
         if (player.transform.position.x <= 0.5) {
-        player.transform.position.x += 0.01 ;
+        player.transform.position.x += 0.015 ;
         }
 
     }
@@ -93,19 +93,25 @@ function OnTriggerEnter (enterCollider : Collider) {
  		}
  		if (hp==2){
         	hp--;
+        	bulletType=0;
  		}
  		if (hp==3){
         	hp--;
+        	bulletType=0;
  		}
  		if (hp==4){
         	hp--;
+        	bulletType=0;
  		}
  		if (hp==5){
         	hp--;
+        	bulletType=0;
  		}
     }
 		  if (enterCollider.gameObject.name == "item_hp"){
-					hp++;
+		  			if(hp<5){
+						hp++;
+					}
 					Destroy (enterCollider.gameObject) ;
 			}
 		 if (enterCollider.gameObject.name == "item_multishot"){

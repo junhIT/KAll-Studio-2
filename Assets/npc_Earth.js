@@ -40,7 +40,7 @@ function Attack () {
 	var currentBullet2 : GameObject ;
 	var currentBullet3 : GameObject ;
 
-    currentBullet1 = Instantiate (bullet, npc.transform.position,  Quaternion.identity) ;
+   currentBullet1 = Instantiate (bullet, npc.transform.position,  Quaternion.identity) ;
 	currentBullet2 = Instantiate (bullet, npc.transform.position,  Quaternion.Euler(0,0,20)) ;
 	currentBullet3 = Instantiate (bullet, npc.transform.position,  Quaternion.Euler(0,0,-20)) ;
 

@@ -50,7 +50,7 @@ function Update () {
 
     }
     if (hp==0){
-			Destroy(gameObject);
+			Application.LoadLevel("stage2") ;   
 		}
 
 }
@@ -74,15 +74,5 @@ function Attack () {
 	currentBullet4.name="bossbullet";
 
 }
-
-function OnDestroy () {
- 
-    Application.LoadLevel("stage2") ;    
- 
-}
-
-
-
-
 
 

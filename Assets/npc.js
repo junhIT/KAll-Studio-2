@@ -7,7 +7,7 @@ private var timer : float ;
 var npc : GameObject ;
 
 function Start () {
-
+	
 	npcSpeed = 20;
 	gameObject.GetComponent(Rigidbody).AddForce(transform.up * npcSpeed * -1);
 	attackCoolTime = 0.5 ;

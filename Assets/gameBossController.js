@@ -8,7 +8,7 @@ private var gameTimer : float ;
 var hpview : UI.Text ;
 var boss_text : UI.Text ;
 var GetHp : int ;
-
+var item : GameObject ;
 
 
 function Start () {
@@ -34,3 +34,10 @@ function initboss(){
 }
 
 Invoke("initboss",5);
+
+function inititem_multishot(){
+	var itemObj : GameObject = Instantiate (item, Vector3(Random.Range(-0.5, 0.5), 2, -5), Quaternion.identity) ;
+	itemObj.name = "item_multishot" ;
+}
+
+Invoke("inititem_multishot", 1);

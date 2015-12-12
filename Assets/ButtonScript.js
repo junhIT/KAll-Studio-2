@@ -8,7 +8,7 @@ function Start () {
 }
 function OnGUI()
 {
-   if (GUI.RepeatButton(new Rect(10, 315, 40, 40), "<-"))
+   if (GUI.RepeatButton(new Rect(10, 1400, 250, 250), "<-"))
    {
    if (box.transform.position.x >= -0.5) 
    	{
@@ -16,7 +16,7 @@ function OnGUI()
   	}
    }
 	            
-   if (GUI.RepeatButton(new Rect(150, 315, 40, 40), "->"))
+   if (GUI.RepeatButton(new Rect(800, 1400, 250, 250), "->"))
    {
    if (box.transform.position.x <= 0.5) 
    	{
@@ -24,8 +24,6 @@ function OnGUI()
    	}
    }
    
-   if (GUI.RepeatButton(new Rect(10, 270, 40, 40), "B"));
-   GUI.Label (new Rect(10,270,40,30),"hi");
 }
 
 function Update () {
