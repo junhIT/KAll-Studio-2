@@ -24,7 +24,10 @@ function OnTriggerEnter (enterCollider : Collider) {
     }else if(enterCollider.gameObject.name == "boss_stage2"){
       GameObject.Find("boss_stage2").GetComponent(boss_stage2).hp-=1;
       Destroy (gameObject) ;
-}
+	}else if(enterCollider.gameObject.name == "boss_stage3"){
+      GameObject.Find("boss_stage3").GetComponent(boss_stage3).hp-=1;
+      Destroy (gameObject) ;
+	}
 }
 
 function Update () {

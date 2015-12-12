@@ -4,7 +4,7 @@ private var bulletSpeed : float ;
 
 function Start () {
 
-    bulletSpeed = 40 ;
+    bulletSpeed = 20 ;
 
     gameObject.GetComponent(Rigidbody).AddForce(-transform.up * bulletSpeed) ;
 }

@@ -5,11 +5,11 @@ function Start () {
 }
 
 function Update () {
-    if (gameObject.tag == "stage3_bg") {
+    if (gameObject.tag == "stage3") {
  
         if (gameObject.transform.position.y > -0.8) {
  
-            gameObject.transform.position.y -= 0.003 ;
+            gameObject.transform.position.y -= 0.01 ;
  
         }
         else 
@@ -18,5 +18,4 @@ function Update () {
  
         }
     }
-
 }
