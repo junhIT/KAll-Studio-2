@@ -28,7 +28,7 @@ function Update () {
 	  gameTimer+= Time.deltaTime ;
 
     hpview.text="x"+GetHp;
-    if(gameTimer>30){
+    if(gameTimer>60){
       Application.LoadLevel("boss_stage1") ;
     }
     if(gameTimer>5){

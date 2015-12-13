@@ -28,7 +28,7 @@ function Update () {
 	  gameTimer+= Time.deltaTime ;
 
     hpview.text="x"+GetHp;
-    if(gameTimer>30){
+    if(gameTimer>100){
       Application.LoadLevel("boss_stage3") ;
     }
     if(gameTimer>5){
@@ -41,6 +41,8 @@ function Update () {
  		npcObj.name = "npc1" ;
 		var npcObj3 : GameObject = Instantiate (npc3, Vector3(Random.Range(-0.5, 0.5), 2, -5), Quaternion.identity) ;
 		npcObj3.name = "npc3" ;
+		var npcObj4 : GameObject = Instantiate (npc3, Vector3(Random.Range(-0.5, 0.5), 2, -5), Quaternion.identity) ;
+		npcObj4.name = "npc3" ;
 
     }
 

@@ -8,7 +8,7 @@ var boss : GameObject ;
 var hp : float;
 
 function Start () {
-	hp = 50;
+	hp = 100;
 	npcSpeed = 20;
 	gameObject.GetComponent(Rigidbody).AddForce(transform.up * npcSpeed * -1);
 	gameObject.GetComponent(Rigidbody).AddForce(transform.right * npcSpeed * -1);
